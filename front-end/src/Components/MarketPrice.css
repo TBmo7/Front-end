@@ -1,0 +1,70 @@
+.MarketPrice{
+    width:95%;
+    margin: 3%;
+    max-width:800px;
+    height:100%;
+}
+.siteContainer{
+    height:100%;
+    width:100%;
+    margin: 5px;
+}
+
+.topBar{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #142051;
+    color: #FE7A7C;
+    text-decoration: none;
+    
+}
+.topBar Link{
+    text-decoration: none;
+}
+
+.formDiv{
+    width:95%;
+    margin:3%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.dropDown{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+input{
+    width:95%;
+    margin-bottom: 20px;
+}
+
+.siteContainer{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.sideBar{
+    margin:5px;
+    height:100%;
+    width:100%;
+    background-color: #142051;
+    color: #FE7A7C;
+}
+.dropDown{
+    display: flex;
+    flex-direction: column;
+}
+.dropDown select{
+    width:100%;
+    
+}
