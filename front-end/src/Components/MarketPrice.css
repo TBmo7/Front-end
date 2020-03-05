@@ -1,69 +1,99 @@
+
+
 .MarketPrice{
-    width:95%;
-    margin: 3%;
-    max-width:800px;
+    width:100%;
     height:100%;
 }
+
+.topBar{
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    background-color: #142051;
+    color: #FE7A7C;
+    justify-content:space-around;
+      
+}
+
+.topBar a{
+    text-decoration: none;
+    color:#FE7A7C;
+    height:5%;
+    align-self: center;
+    
+}
+
 .siteContainer{
     height:100%;
     width:100%;
     margin: 5px;
-}
-
-.topBar{
     display:flex;
     flex-direction: row;
-    justify-content: space-between;
-    background-color: #142051;
-    color: #FE7A7C;
-    text-decoration: none;
-    
-}
-.topBar Link{
-    text-decoration: none;
+    justify-content: center;
+    align-items: top;
 }
 
+
+
+.sideBar{
+    
+    width:80%;
+    background-color: #142051;
+    color: #FE7A7C;
+    min-height:800px;
+    
+}
+
+.text-box{
+    align-self: top;
+}
+
+
+
 .formDiv{
-    width:95%;
+    width:100%;
     margin:3%;
     display:flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height:100%;
 
 }
+
+form{
+    width:100%;
+}
+
 
 .dropDown{
     width:100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
 
+label p{
+    align-self: flex-start;
+    justify-content:flex-start;
+    width:10%;
+    
+}
 
-input{
-    width:95%;
+
+
+select,input{
+    width:100%;
     margin-bottom: 20px;
+    border: 1px solid black;
+    border-radius:4px;
+    
 }
 
-.siteContainer{
-    width:100%;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
-.sideBar{
-    margin:5px;
-    height:100%;
-    width:100%;
-    background-color: #142051;
-    color: #FE7A7C;
-}
-.dropDown{
-    display: flex;
-    flex-direction: column;
-}
+
+
+
 .dropDown select{
     width:100%;
     

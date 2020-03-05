@@ -16,12 +16,11 @@ function MarketPrice()  {
     useEffect(()=>{
         const getItems = () =>{
             
-            // axiosWithAuth()
-            // .get('/inputs')
+            
              axios.get('https://african-marketplace-bw-1.herokuapp.com/api/inputs',{
-            //     headers:{
-            //         'Authorization' : 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1ODI3NzI3MTksImV4cCI6MTU4Mjg1OTExOX0.Cwg6QakjQKNkRuZ-3fjThgW51DoFOmOvPiBlQ2czsAU'
-            //     }
+            
+            
+            
              })
             .then(response =>{
                 console.log("Response Data", response);
@@ -33,7 +32,7 @@ function MarketPrice()  {
         getItems();
     }, [])
     console.log("Market Items ", marketItems)
-     //<<this is the issue, an array that says objectx14
+     
     const [searchCat, setSearchCat] = useState('');
     const [searchItem, setSearchItem] = useState('');
     const [searchLoc, setSearchLoc] = useState('');
@@ -67,39 +66,45 @@ function MarketPrice()  {
         
     }, [searchItem,searchLoc,searchCat]);
 
+    const buttonHandler = (results) =>{
+        console.log(results)
+        results.map(item=>(
+            <div>
+            <ItemCard key = {item.id} idata = {item}/>
+            </div>
+    ))
+
+    }
+
     
 
-    //^^^This doesn't work
 
-    // useEffect(()=>{
-    //     const results = marketItems.filter(items =>{
-    //          items.toString().toLowerCase().includes(searchItem.toLowerCase());
-    //     });
-    //     setSearchResults(results);
-    //     console.log("Results ",searchResults);
-    // }, [searchItem]);
 
   
 
     return(
-// creating basic form
+
     
        <div className = "MarketPrice">
 
            <div className = "topBar">
-             <p>Sauti</p>  
-           <div>
+             <h2>Sauti.</h2>  
+          
             <Link to = "/">Home</Link>
-             </div>
+             
              </div>
 
         <div className = "siteContainer">
             <div className = "sideBar">
-                <p>Sauti</p>
-                
-                <p>---------------</p>
-                
+                <div className = "text-box">
+                <h2>Sauti.</h2>
+                <p>______________</p>
                 <p>Market Price Check</p>
+                <br/>
+                <p>Here you can check local prices for goods,
+                and use the information to make informed decisions
+                on where to post your goods.</p>
+                </div>
                 </div>
              <div className = "formDiv">
               <form >
@@ -112,16 +117,16 @@ function MarketPrice()  {
                           <option value = "cereals" >Cereals</option>
                           <option value = "fruits" >Fruits</option>
                           <option value = "vegetables" >Vegetables</option>
-                          <option value = "seeds and nuts" >Seeds and Nuts</option>
+                          <option value = "seeds & nuts" >Seeds and Nuts</option>
                           <option value = "other" >Other</option>
                           <option value = "peas" >Peas</option>
-                          <option value = "roots and tubers" >Roots and Tubers</option>
+                          <option value = "roots & tubers" >Roots and Tubers</option>
                           
                       </select>
                   </label>
                   <br/>
                   <label>
-                <p>Item: </p>
+                <p >Item: </p>
                 <input
                 id = "item"
                 name = "item"
@@ -132,13 +137,14 @@ function MarketPrice()  {
                 />
                  </label>
                  <br/>
-                 <label>
+                 <label >
                      <p>Location:</p> 
                      <input
                      id = "location"
                      name = "location"
                      type = "text"
                      placeholder = "Search by location"
+                     
                      value = {searchLoc}
                      onChange = {locChange}
                      />
@@ -151,9 +157,11 @@ function MarketPrice()  {
                 {searchResults.map(item=>(
                         <ItemCard key = {item.id} idata = {item}/>
                 ))}
-                
-
-              </div>
+                </div>
+                {/* <div>
+               <button onClick = {()=>buttonHandler(searchResults)}>Return Goods</button> 
+               </div> */}
+              
               </div>
               
               </div>
