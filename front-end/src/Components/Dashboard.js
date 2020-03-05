@@ -80,7 +80,7 @@ function Dashboard() {
         <TopBar>
             <h1>Sauti.</h1>
             <h2>My Dashboard</h2>
-            <p>Sign Out</p> {/*change this here with JS to accept a click to sign out*/}
+            <p>Sign Out</p> 
 
         </TopBar>
 

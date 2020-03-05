@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {Link} from 'react-router-dom';
-import styled from 'styled-components';
+
 import "./MarketPrice.css"
 import axios from "axios";
 
@@ -158,9 +158,7 @@ function MarketPrice()  {
                         <ItemCard key = {item.id} idata = {item}/>
                 ))}
                 </div>
-                {/* <div>
-               <button onClick = {()=>buttonHandler(searchResults)}>Return Goods</button> 
-               </div> */}
+                
               
               </div>
               
